@@ -1,0 +1,9 @@
+<h1>auth dziala</h1>
+<ng-container *ngIf="!authService.currentUserSig(); else logged">
+  <p routerLink="login">Login</p>
+  <p routerLink="register">Register</p>
+</ng-container>
+<ng-template #logged>
+  <p (click)="logout()">{{authService.currentUserSig()?.username}} Logout</p>
+</ng-template>
+<router-outlet></router-outlet>
