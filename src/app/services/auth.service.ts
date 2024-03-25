@@ -1,7 +1,7 @@
 import {Injectable, signal, WritableSignal} from '@angular/core';
-import {BehaviorSubject, from, Observable, switchMap} from "rxjs";
+import {from, Observable, switchMap} from "rxjs";
 import {AngularFireAuth} from "@angular/fire/compat/auth";
-import {UserInterface} from "../interfaces/user-interface";
+import {UserInterface} from "../interfaces/user.interface";
 
 @Injectable({
   providedIn: 'root'

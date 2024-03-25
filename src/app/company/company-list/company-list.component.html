@@ -1,0 +1,10 @@
+<button (click)="addCompany()">Dodaj</button>
+<div class="test">
+  <ul>
+    <li *ngFor="let company of companies$ | async" [routerLink]="['/company', company.id]">
+      <span>name: {{ company.name }}</span>
+      <span>email: {{ company.email }}</span>
+      <span (click)="deleteCompany($event, company.id || '')">X</span>
+    </li>
+  </ul>
+</div>
